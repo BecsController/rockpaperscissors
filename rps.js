@@ -51,13 +51,8 @@ function game(){
   let roundCountComp = 0;
 
   let playerSelection = prompt("Okay, Rock, Paper, Scissors is on!  What's your move cowboy?");
-
-
-const playerSelction = 'rock';
-const computerSelection = computerPlay ();
-console.log(playRound(playerSelction, computerSelection));
+  const computerSelection = computerPlay ();
+console.log(playRound(playerSelection, computerSelection));
 }
-function declareWinner () {
-  alert("You lose, Paper beats Rock!");
-}
+
 }
