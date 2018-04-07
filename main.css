@@ -61,3 +61,7 @@ button{
 .invisible{
   display: none;
 }
+p{
+  margin-top: .5rem;
+  text-align: right;
+}
