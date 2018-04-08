@@ -42,10 +42,10 @@ function start() {
 });
 
 
-let options = ["rock", "paper", "scissors"];
+let options = ["rock", "paper", "scissors", "lizard", "spock"];
 
   function computerPlay (){
-    let arrayPosition = Math.floor(Math.random()*2);
+    let arrayPosition = Math.floor(Math.random()*4);
     let computerSelection = options[arrayPosition];
     alert("Computer plays " + computerSelection);
     playRound(playerSelection, computerSelection)
