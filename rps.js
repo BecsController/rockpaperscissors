@@ -18,27 +18,22 @@ function start() {
 
   rockButton.addEventListener("click", function() {
   playerSelection = "rock";
-  alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   paperButton.addEventListener("click", function() {
   playerSelection = "paper";
-  alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   scissorsButton.addEventListener("click", function() {
   playerSelection = "scissors";
-  alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   lizardButton.addEventListener("click", function() {
   playerSelection = "lizard";
-  alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   spockButton.addEventListener("click", function() {
   playerSelection = "spock";
-  alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   resetButton.addEventListener("click", function(){
@@ -53,7 +48,6 @@ let options = ["rock", "paper", "scissors", "lizard", "spock"];
   function computerPlay (){
     let arrayPosition = Math.floor(Math.random()*5);
     let computerSelection = options[arrayPosition];
-    alert("Computer plays " + computerSelection);
     playRound(playerSelection, computerSelection)
   }
 
@@ -63,17 +57,17 @@ let options = ["rock", "paper", "scissors", "lizard", "spock"];
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "scissors" && playerSelection === "rock"){
-       result.innerHTML ='(and as it always has) Rock crushes Scissors.';
+       result.innerHTML ='(and as it always has) Rock crushes Scissors. One for the Comp';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "rock" && playerSelection === "rock"){
-       result.innerHTML ='Tied!';
+       result.innerHTML ='I like rocks too! Tied!';
      } else if (computerSelection === "lizard" && playerSelection === "rock"){
-       result.innerHTML ='Rock crushes lizard!';
+       result.innerHTML ='Rock crushes lizard! One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "spock" && playerSelection === "rock"){
-       result.innerHTML ='Spock vaporizes Rock';
+       result.innerHTML ='Spock vaporizes Rock.  One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "scissors" && playerSelection === "paper"){
@@ -85,13 +79,13 @@ let options = ["rock", "paper", "scissors", "lizard", "spock"];
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "paper" && playerSelection === "paper"){
-       result.innerHTML = 'A draw!';
+       result.innerHTML = 'A draw! Get it?  You both chose paper hehe';
      } else if (computerSelection === "lizard" && playerSelection === "paper"){
-       result.innerHTML = 'Lizard eats Paper';
+       result.innerHTML = 'Lizard eats Paper. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "spock" && playerSelection === "paper"){
-       result.innerHTML = 'Paper disproves Spock';
+       result.innerHTML = 'Paper disproves Spock. One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "rock" && playerSelection === "scissors"){
@@ -103,51 +97,51 @@ let options = ["rock", "paper", "scissors", "lizard", "spock"];
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "lizard" && playerSelection === "scissors"){
-       result.innerHTML = 'Scissors decapitates Lizard';
+       result.innerHTML = 'Scissors decapitates Lizard.  One for the newbie!';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "spock" && playerSelection === "scissors"){
-       result.innerHTML = 'Spock smashes Scissors';
+       result.innerHTML = 'Spock smashes Scissors. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "scissors" && playerSelection === "scissors"){
-       result.innerHTML = 'No winner today';
+       result.innerHTML = 'Two lots of scissors, no winner today';
      } else if (computerSelection === "rock" && playerSelection === "spock"){
-       result.innerHTML = 'Spock vaporizes Rock';
+       result.innerHTML = 'Spock vaporizes Rock. One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "paper" && playerSelection === "spock"){
-       result.innerHTML = 'Paper disproves Spock';
+       result.innerHTML = 'Paper disproves Spock. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "scissors" && playerSelection === "spock"){
-       result.innerHTML = 'Spock smashes scissors';
+       result.innerHTML = 'Spock smashes scissors. One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "lizard" && playerSelection === "spock"){
-       result.innerHTML = 'Lizard poisons Spock';
+       result.innerHTML = 'Lizard poisons Spock. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "spock" && playerSelection === "spock"){
-       result.innerHTML = 'Live long and prosper';
+       result.innerHTML = 'Spock meets Spock, Live long and prosper';
      } else if (computerSelection === "rock" && playerSelection === "lizard"){
-       result.innerHTML = 'Rock crushes Lizard';
+       result.innerHTML = 'Rock crushes Lizard. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "paper" && playerSelection === "lizard"){
-       result.innerHTML = 'Lizard eats paper';
+       result.innerHTML = 'Lizard eats paper. One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "scissors" && playerSelection === "lizard"){
-       result.innerHTML = 'Scissors decapitates Lizard';
+       result.innerHTML = 'Scissors decapitates Lizard. One for the Comp';
        roundCountComp++;
        compScore.innerHTML = 'Computer Count: ' + roundCountComp;
      } else if (computerSelection === "spock" && playerSelection === "lizard"){
-       result.innerHTML = 'Lizard poisons Spock';
+       result.innerHTML = 'Lizard poisons Spock. One for the challenger';
        roundCountPlayer++;
        playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else if (computerSelection === "lizard" && playerSelection === "lizard"){
-       result.innerHTML = 'Two Lizards in a pod';
+       result.innerHTML = 'Two Lizards in a pod.  Tie.';
    }
  }
 }
