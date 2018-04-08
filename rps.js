@@ -5,6 +5,8 @@ function start() {
   var rockButton = document.getElementsByClassName("rock")[0];
   var paperButton = document.getElementsByClassName("paper")[0];
   var scissorsButton = document.getElementsByClassName("scissors")[0];
+  var lizardButton = document.getElementsByClassName("lizard")[0];
+  var spockButton = document.getElementsByClassName("spock")[0];
   let computerSelection = "rock";
   let playerSelection = "rock";
   let roundCountComp = 0;
@@ -25,6 +27,16 @@ function start() {
 });
   scissorsButton.addEventListener("click", function() {
   playerSelection = "scissors";
+  alert("Player Chooses " + playerSelection);
+  computerPlay();
+});
+  lizardButton.addEventListener("click", function() {
+  playerSelection = "lizard";
+  alert("Player Chooses " + playerSelection);
+  computerPlay();
+});
+  spockButton.addEventListener("click", function() {
+  playerSelection = "spock";
   alert("Player Chooses " + playerSelection);
   computerPlay();
 });
