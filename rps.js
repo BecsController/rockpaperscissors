@@ -7,28 +7,30 @@ function start() {
   var scissorsButton = document.getElementsByClassName("scissors")[0];
   let computerSelection = "rock";
   let playerSelection = "rock";
+  let roundCountComp = 0;
+  let roundCountPlayer = 0;
+  let result = document.getElementById("result");
+  let playerScore = document.getElementById("playerCount");
+  let compScore = document.getElementById("compCount");
 
   rockButton.addEventListener("click", function() {
-  let playerSelection = "rock";
+  playerSelection = "rock";
   alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   paperButton.addEventListener("click", function() {
-  let playerSelection = "paper";
+  playerSelection = "paper";
   alert("Player Chooses " + playerSelection);
   computerPlay();
 });
   scissorsButton.addEventListener("click", function() {
-  let playerSelection = "scissors";
+  playerSelection = "scissors";
   alert("Player Chooses " + playerSelection);
   computerPlay();
 });
 
 
 let options = ["rock", "paper", "scissors"];
-let roundCountComp = 0;
-let roundCountPlayer = 0;
-let result = document.getElementById("result");
 
   function computerPlay (){
     let arrayPosition = Math.floor(Math.random()*2);
@@ -38,39 +40,36 @@ let result = document.getElementById("result");
   }
 
   function playRound (playerSelection, computerSelection){
-
-   switch(playerSelection){
-     case "rock":
-     if (computerSelection === "paper"){
+     if (computerSelection === "paper" && playerSelection === "rock"){
        result.innerHTML = 'Paper covers rock!  One for the Comp!';
        roundCountComp++;
-     } else if (computerSelection === "scissors"){
+       compScore.innerHTML = 'Computer Count: ' + roundCountComp;
+     } else if (computerSelection === "scissors" && playerSelection === "rock"){
        result.innerHTML ='Rock breaks scissors!  One for the challenger!';
        roundCountPlayer++;
-     } else {
+       playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
+     } else if (computerSelection === "rock" && playerSelection === "rock"){
        result.innerHTML ='Tied!';
-     } break;
-     case "paper":
-     if (computerSelection === "scissors"){
+     } else if (computerSelection === "scissors" && playerSelection === "paper"){
        result.innerHTML = 'Scissors cuts paper! One for the Comp!';
        roundCountComp++;
-     }else if (computerSelection === "rock"){
+       compScore.innerHTML = 'Computer Count: ' + roundCountComp;
+     }else if (computerSelection === "rock" && playerSelection === "paper"){
        result.innerHTML = 'Paper covers rock!  One for the challenger!';
        roundCountPlayer++;
-     } else{
+       playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
+     } else if (computerSelection === "paper" && playerSelection === "paper"){
        result.innerHTML = 'A draw!';
-     } break;
-     case "scissors":
-     if (computerSelection === "rock"){
+     } else if (computerSelection === "rock" && playerSelection === "scissors"){
        result.innerHTML = 'Rock breaks scissors!  One for the comp!';
        roundCountComp++;
-     } else if (computerSelection === "paper"){
+       compScore.innerHTML = 'Computer Count: ' + roundCountComp;
+     } else if (computerSelection === "paper" && playerSelection === "scissors"){
        result.innerHTML = 'Scissors cut paper!  One for the challenger!';
        roundCountPlayer++;
+       playerScore.innerHTML = 'Player Count: ' + roundCountPlayer;
      } else{
        result.innerHTML = 'No winner today';
      }
    }
-
-  }
-}
+ }
