@@ -58,6 +58,10 @@ button{
   padding-top: 0.75rem;
   height: 3rem;
 }
+.reset{
+  margin-left: 5rem;
+  color: #A239CA;
+}
 .invisible{
   display: none;
 }
